@@ -21,3 +21,35 @@
   padding-left: spacing(4);
   padding-right: spacing(4);
 }
+
+.section-title {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: to-rem(44);
+  }
+
+  &__explore-btn {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    font-size: to-rem(24);
+  }
+
+  &__explore-btn-icon {
+    width: 34px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  &__divider {
+    border-color: #cccccc;
+    margin: spacing(10) 0px;
+  }
+}
