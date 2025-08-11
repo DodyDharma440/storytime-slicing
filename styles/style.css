@@ -298,6 +298,7 @@ input[type=search]::-webkit-search-decoration {
   margin-bottom: 20px;
   background: #dddddd;
   overflow: hidden;
+  position: relative;
 }
 .story-card__thumbnail-image {
   object-fit: cover;
@@ -316,6 +317,7 @@ input[type=search]::-webkit-search-decoration {
   -webkit-box-orient: vertical;
   display: -webkit-box;
   overflow: hidden;
+  height: 64px;
 }
 .story-card__info {
   display: flex;
@@ -352,6 +354,39 @@ input[type=search]::-webkit-search-decoration {
   background-color: #f0f5ed;
   color: #466543;
 }
+.story-card__bookmark-btn {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #466543;
+  border-radius: 50%;
+}
+.story-card__bookmark-btn-icon {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+.story-card--large .story-card__thumbnail {
+  height: 1066px;
+}
+.story-card--large .story-card__bookmark-btn {
+  width: 100px;
+  height: 100px;
+  right: 60px;
+  bottom: 60px;
+}
+.story-card--large .story-card__bookmark-btn-icon {
+  width: 60px;
+  height: 60px;
+}
+.story-card--small .story-card__thumbnail {
+  height: 400px;
+}
 
 .stories-slider {
   overflow-x: auto;
@@ -371,6 +406,22 @@ input[type=search]::-webkit-search-decoration {
 }
 .stories-slider__item:nth-child(1) {
   margin-left: 0;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 46px;
+}
+.stories-grid__item {
+  grid-column: span 4/span 4;
+  grid-row: span 1/span 1;
+}
+.stories-grid__item--large {
+  grid-column: span 8/span 8;
+  grid-row: span 2/span 2;
 }
 
 .navbar {

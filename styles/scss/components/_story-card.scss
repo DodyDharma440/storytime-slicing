@@ -8,6 +8,7 @@
     margin-bottom: utilities.spacing(5);
     background: #dddddd;
     overflow: hidden;
+    position: relative;
 
     &-image {
       object-fit: cover;
@@ -29,6 +30,7 @@
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
+    height: 64px;
   }
 
   &__info {
@@ -69,6 +71,49 @@
       text-align: center;
       background-color: variables.$primary-color-light;
       color: variables.$primary-color;
+    }
+  }
+
+  &__bookmark-btn {
+    position: absolute;
+    right: utilities.spacing(10);
+    bottom: utilities.spacing(10);
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$primary-color;
+    border-radius: 50%;
+
+    &-icon {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+  }
+
+  &--large {
+    .story-card__thumbnail {
+      height: 1066px;
+    }
+
+    .story-card__bookmark-btn {
+      width: 100px;
+      height: 100px;
+      right: utilities.spacing(15);
+      bottom: utilities.spacing(15);
+
+      &-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  &--small {
+    .story-card__thumbnail {
+      height: 400px;
     }
   }
 }

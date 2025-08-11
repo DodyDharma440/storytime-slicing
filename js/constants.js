@@ -70,3 +70,67 @@ const romanceStories = [
     date: "25 November 2022",
   },
 ];
+
+const comedyStories = [
+  {
+    thumbnail: "1.png",
+    title: "Guardians of the Galaxy Vol. 3",
+    description:
+      "At their new headquarters on Knowhere,[a] the Guardians of the Galaxy are attacked by Adam Warlock, a Sovereign warrior created by their high priestess Ayesha.[b] After Adam overpowers them and critically wounds Rocket, he is stabbed by Nebula and forced to flee. The Guardians are unable to tend to Rocket's wounds due to a kill switch, made by the company Orgocorp, embedded in him. They travel to Orgocorp's headquarters to find the override code. As Rocket lies unconscious, he recalls his past. As a baby raccoon, he was experimented on by the High Evolutionary, a scientist who sought to enhance and anthropomorphize animal lifeforms to create a Counter-Earth.",
+    avatar: "3.png",
+    author: "Juliana Putra",
+    date: "15 May 2023",
+    isHighlight: true,
+  },
+  {
+    thumbnail: "2.png",
+    title: "Doctor Strange",
+    description: "Doctor Strange is Dr. Stephen Strange",
+    avatar: "4.png",
+    author: "Langgam",
+    date: "11 May 2022",
+  },
+  {
+    thumbnail: "3.png",
+    title: "Si Kancil",
+    description:
+      "Dina dongeng ieu, urang bakal nyaritakeun hiji sato anu pinter, saha deui lamun lain kijang jeung babaturanana? Di hiji leuweung carita aya nu ngarasa halabhab alatan usum halodo anu berkepanjangan. Samentara éta pasukan buaya ogé teu hayang babagi cai saeutik pikeun maranéhanana, buaya dikawasa sakabeh walungan cai sakuliah leuweung. Babaturan kancil ieu nyaéta hayam, Kuya, jeung gagak. Dina hiji poe basa keur neangan cai inumeun, datang gagak mere informasi yen di deukeut imah patani aya cai tapi dina wadah gede.",
+    avatar: "1.png",
+    author: "Fhaladin",
+    date: "16 November 2022",
+  },
+];
+
+const horrorStories = [
+  {
+    thumbnail: "1.png",
+    title: "Berangkat Kerja",
+    description:
+      "Seperti hari-hari biasa, aku bangun pagi, sarapan dan pergi ke stasuin untuk naik kereta dan berangkat kerja. Hari ini cukup lambat karena nampaknya kereta akan telat datang sekitar 10 menit. Aku dan orang-orang yang memiliki tujuan yang sama ini hanya menunggu di kursi sebelum kereta datang. 15 menit. Itulah waktu yang sudah terlewati sebelum petugas stasiun membunyikan peluitnya.",
+    avatar: "2.png",
+    author: "Fhaladin",
+    date: "15 May 2023",
+    bookmark: true,
+    isHighlight: true,
+  },
+  {
+    thumbnail: "2.png",
+    title: "Persahabatan yang Tidak Sehat",
+    description:
+      '"Tidak, Min, sungguh aku sekarang tidak berminat belajar tari Bali. Dulu memang aku berminat, tetapi sekarang aku tidak sempat!" demikian penjelasan Weni pada Hermin di telepon. Ibu mendengar percakapan itu. Setelah Weni menutup gagang telepon, Ibu bertanya, "Telepon dari Hermin, Wen?" "lya, Bu!" jawab Weni, lalu kembali menekuni PR-nya. Petang hari itu cuaca cerah, tetapi Ibu merasa ada sesuatu yang kurang beres pada anaknya.',
+    avatar: "4.png",
+    author: "John Doe",
+    date: "16 November 2022",
+    bookmark: true,
+  },
+  {
+    thumbnail: "3.png",
+    title: "Hantu Sungai Ciliwung",
+    description:
+      "“Tolong…” Sontak, mata Asih terbuka. Suara tangisan minta tolong itu terdengar lagi! Asih membalikkan tubuhnya, berusaha mengacuhkan suara itu. Gerakannya itu membuat tidur adiknya jadi resah. “Sst… jangan berisik, Asih,” ucap ibu yang tidur di samping adik. Mereka semua memang tidur berdempetan di atas kasur tipis. Mau bagaimana lagi, masih bagus ada atap yang menaungi mereka tidur.",
+    avatar: "4.png",
+    author: "John Doe",
+    date: "16 November 2022",
+    bookmark: true,
+  },
+];
