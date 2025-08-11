@@ -1,0 +1,23 @@
+@use "sass:math";
+@use "./variables";
+@use "./mixins";
+
+// Calculate consistent spacing
+// 1 space = 4px
+@function spacing($space) {
+  @return $space * 4px;
+}
+
+// Calculate consistent rem
+// Usually used in font size
+// 18px is base font size in desktop screen size
+@function to-rem($sizePx) {
+  @return math.div($sizePx, 18) + rem;
+}
+
+.container {
+  margin: 0px auto;
+  max-width: 1700px;
+  padding-left: spacing(4);
+  padding-right: spacing(4);
+}

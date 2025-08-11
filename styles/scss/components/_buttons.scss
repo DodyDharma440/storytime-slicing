@@ -1,0 +1,63 @@
+@use "../variables";
+@use "../utilities";
+
+.btn {
+  padding: utilities.spacing(3.5) utilities.spacing(7.5);
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: utilities.to-rem(24);
+  border-radius: utilities.spacing(2);
+  border: 2px solid;
+  border-color: transparent;
+  transition: background-color 0.3s;
+
+  &:disabled,
+  &--disabled {
+    background-color: #e3e3e3;
+    color: #919191;
+    cursor: not-allowed;
+    border: 0;
+    &:hover {
+      background-color: #e3e3e3;
+      color: #919191;
+    }
+  }
+
+  &--primary {
+    background-color: variables.$primary-color;
+    color: #ffffff;
+    &:hover {
+      background-color: rgba(variables.$primary-color, 0.9);
+    }
+  }
+
+  &--primary-default {
+    background-color: transparent;
+    border: 1px solid rgba(variables.$text-color, 0.5);
+    &:hover {
+      color: variables.$primary-color;
+      border-color: variables.$primary-color;
+    }
+  }
+
+  &--primary-light {
+    color: variables.$primary-color;
+    border-color: variables.$primary-color;
+    background-color: rgba(variables.$primary-color, 0.3);
+    border: 1px solid variables.$primary-color;
+  }
+
+  &--primary-outline {
+    color: variables.$primary-color;
+    border-color: variables.$primary-color;
+    background-color: transparent;
+    &:hover {
+      background-color: variables.$primary-color;
+      color: #ffffff;
+    }
+  }
+}

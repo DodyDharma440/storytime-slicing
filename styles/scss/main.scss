@@ -1,0 +1,14 @@
+@use "./variables" as *;
+@use "./reset" as *;
+@use "./utilities" as *;
+@use "./mixins" as *;
+
+@use "./components/buttons" as *;
+
+@use "./pages/home" as *;
+
+body {
+  background-color: $main-background;
+  color: $text-color;
+  font-family: "DM Sans", sans-serif;
+}
