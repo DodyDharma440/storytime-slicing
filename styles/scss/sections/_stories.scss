@@ -1,0 +1,26 @@
+@use "../utilities";
+
+.stories-slider {
+  overflow-x: auto;
+  white-space: nowrap;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &__item {
+    white-space: normal;
+    display: inline-block;
+    margin-left: utilities.spacing(7.5);
+    width: 547px;
+    height: 700px;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+}
+
+.stories-grid {
+}

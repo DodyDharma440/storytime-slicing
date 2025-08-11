@@ -4,6 +4,9 @@
 @use "./mixins" as *;
 
 @use "./components/buttons" as *;
+@use "./components/story-card" as *;
+
+@use "./sections/stories" as *;
 
 @use "./pages/home" as *;
 
