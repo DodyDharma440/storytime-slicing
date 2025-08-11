@@ -388,14 +388,17 @@ input[type=search]::-webkit-search-decoration {
   height: 400px;
 }
 
-.stories-slider {
+.stories-slider-wrapper {
   overflow-x: auto;
-  white-space: nowrap;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.stories-slider::-webkit-scrollbar {
+.stories-slider-wrapper::-webkit-scrollbar {
   display: none;
+}
+
+.stories-slider {
+  white-space: nowrap;
 }
 .stories-slider__item {
   white-space: normal;
@@ -406,6 +409,9 @@ input[type=search]::-webkit-search-decoration {
 }
 .stories-slider__item:nth-child(1) {
   margin-left: 0;
+}
+.stories-slider__item:nth-last-child(1) {
+  margin-right: 40px;
 }
 
 .stories-grid {

@@ -1,14 +1,16 @@
 @use "../utilities";
 
-.stories-slider {
+.stories-slider-wrapper {
   overflow-x: auto;
-  white-space: nowrap;
-
   &::-webkit-scrollbar {
     display: none;
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.stories-slider {
+  white-space: nowrap;
 
   &__item {
     white-space: normal;
@@ -16,8 +18,13 @@
     margin-left: 29px;
     width: 544px;
     vertical-align: top;
+
     &:nth-child(1) {
       margin-left: 0;
+    }
+
+    &:nth-last-child(1) {
+      margin-right: utilities.spacing(10);
     }
   }
 }
