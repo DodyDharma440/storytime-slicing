@@ -34,6 +34,11 @@
   &__social-icon {
     width: 100%;
     height: 36px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(utilities.spacing(-0.5));
+    }
 
     @include mixins.lg {
       height: 40px;

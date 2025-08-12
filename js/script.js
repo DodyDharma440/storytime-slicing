@@ -7,6 +7,7 @@ const horrorGrid = document.getElementById("horror-grid");
 const handleSliderItem = (story, thumbPrefix) => {
   return `
         <div class="stories-slider__item">
+          <a href="#">
             <div class="story-card">
                 <div class="story-card__thumbnail">
                     <img
@@ -49,6 +50,7 @@ const handleSliderItem = (story, thumbPrefix) => {
                 </div>
                 </div>
             </div>
+          </a>
         </div>
     `;
 };
@@ -56,45 +58,47 @@ const handleSliderItem = (story, thumbPrefix) => {
 const handleGridItem = (story, thumbPrefix) => {
   return `
     <div class="stories-grid__item${story.isHighlight ? "--large" : ""}">
+      <a href="#">
         <div class="story-card story-card${
           story.isHighlight ? "--large" : "--small"
         }">
-        <div class="story-card__thumbnail">
-            <img
-            src="assets/stories/${thumbPrefix}/${story.thumbnail}"
-            class="story-card__thumbnail-image"
-            />
-            <button class="story-card__bookmark-btn">
-            <img
-                class="story-card__bookmark-btn-icon"
-                src="assets/icons/bookmark.svg"
-                loading="lazy"
-            />
-            </button>
-        </div>
-        <div>
-            <h6 class="story-card__title">${story.title}</h6>
-            <p class="story-card__description">${story.description}</p>
+          <div class="story-card__thumbnail">
+              <img
+              src="assets/stories/${thumbPrefix}/${story.thumbnail}"
+              class="story-card__thumbnail-image"
+              />
+              <button class="story-card__bookmark-btn">
+              <img
+                  class="story-card__bookmark-btn-icon"
+                  src="assets/icons/bookmark.svg"
+                  loading="lazy"
+              />
+              </button>
+          </div>
+          <div>
+              <h6 class="story-card__title">${story.title}</h6>
+              <p class="story-card__description">${story.description}</p>
 
-            <div class="story-card__info">
-            <div class="story-card__info-author">
-                <div class="story-card__info-author-avatar">
-                <img
-                    src="assets/avatars/${story.avatar}"
-                    alt="Author Avatar"
-                    class="story-card__info-author-avatar-image"
-                    loading="lazy"
-                />
-                </div>
-                <p class="story-card__info-author-name">
-                ${story.author}
-                </p>
-            </div>
+              <div class="story-card__info">
+              <div class="story-card__info-author">
+                  <div class="story-card__info-author-avatar">
+                  <img
+                      src="assets/avatars/${story.avatar}"
+                      alt="Author Avatar"
+                      class="story-card__info-author-avatar-image"
+                      loading="lazy"
+                  />
+                  </div>
+                  <p class="story-card__info-author-name">
+                  ${story.author}
+                  </p>
+              </div>
 
-            <p>${story.date}</p>
-            </div>
+              <p>${story.date}</p>
+              </div>
+          </div>
         </div>
-        </div>
+      </a>
     </div>
     `;
 };
@@ -150,3 +154,14 @@ window.addEventListener("click", handleOutsideClick);
 navBtn.addEventListener("click", handleClickMenu);
 
 navMobileMenu.addEventListener("click", (e) => e.stopPropagation());
+
+const bookmarkButtons = document.getElementsByClassName(
+  "story-card__bookmark-btn"
+);
+
+for (let i = 0; i < bookmarkButtons.length; i++) {
+  const btn = bookmarkButtons[i];
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+}

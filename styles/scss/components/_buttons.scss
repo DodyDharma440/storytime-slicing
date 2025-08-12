@@ -14,11 +14,15 @@
   border-radius: utilities.spacing(2);
   border: 2px solid;
   border-color: transparent;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 
   @include mixins.lg {
     font-size: utilities.to-rem(24);
     padding: utilities.spacing(3.5) utilities.spacing(7.5);
+  }
+
+  &:active {
+    transform: translateY(utilities.spacing(0.5));
   }
 
   &:disabled,
@@ -39,22 +43,6 @@
     &:hover {
       background-color: rgba(variables.$primary-color, 0.9);
     }
-  }
-
-  &--primary-default {
-    background-color: transparent;
-    border: 1px solid rgba(variables.$text-color, 0.5);
-    &:hover {
-      color: variables.$primary-color;
-      border-color: variables.$primary-color;
-    }
-  }
-
-  &--primary-light {
-    color: variables.$primary-color;
-    border-color: variables.$primary-color;
-    background-color: rgba(variables.$primary-color, 0.3);
-    border: 1px solid variables.$primary-color;
   }
 
   &--primary-outline {

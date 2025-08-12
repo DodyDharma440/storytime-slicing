@@ -106,10 +106,20 @@
     color: variables.$primary-color;
     text-align: center;
     font-size: utilities.to-rem(24);
+    transition: all 0.4s;
 
     @include mixins.lg {
       padding: utilities.spacing(15);
       font-size: utilities.to-rem(28);
+    }
+
+    &:hover {
+      transform: translateY(utilities.spacing(-2));
+      background-color: #e9eee6;
+    }
+
+    &:active {
+      transform: translateY(0);
     }
   }
 }

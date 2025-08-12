@@ -1,5 +1,6 @@
 @use "./mixins";
 @use "./utilities";
+@use "./variables";
 
 .container {
   margin: 0px auto;
@@ -46,20 +47,30 @@
     align-items: center;
     gap: 1px;
     font-size: utilities.to-rem(20);
+    transition: color 0.2s;
 
     @include mixins.lg {
       font-size: utilities.to-rem(24);
     }
-  }
 
-  &__explore-btn-icon {
-    width: 24px;
-    height: 14px;
-    object-fit: contain;
+    &:hover {
+      color: variables.$primary-color;
 
-    @include mixins.lg {
-      width: 34px;
-      height: 24px;
+      .section-title__explore-btn-icon {
+        transform: translateX(utilities.spacing(2));
+      }
+    }
+
+    &-icon {
+      width: 24px;
+      height: 14px;
+      object-fit: contain;
+      transition: transform 0.4s;
+
+      @include mixins.lg {
+        width: 34px;
+        height: 24px;
+      }
     }
   }
 

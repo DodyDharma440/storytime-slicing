@@ -3,6 +3,7 @@
 
 .stories-slider-wrapper {
   overflow-x: auto;
+  padding-top: utilities.spacing(1);
   &::-webkit-scrollbar {
     display: none;
   }
