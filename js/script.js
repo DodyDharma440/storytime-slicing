@@ -14,6 +14,7 @@ const handleSliderItem = (story, thumbPrefix) => {
                     src="assets/stories/${thumbPrefix}/${story.thumbnail}"
                     class="story-card__thumbnail-image"
                     loading="lazy"
+                    alt="${story.title} thumb"
                     />
                 </div>
                 <div>
@@ -27,7 +28,7 @@ const handleSliderItem = (story, thumbPrefix) => {
                         <div class="story-card__info-author-avatar">
                         <img
                             src="assets/avatars/${story.avatar}"
-                            alt="Author Avatar"
+                            alt="${story.author} avatar"
                             class="story-card__info-author-avatar-image"
                             loading="lazy"
                         />
@@ -66,12 +67,14 @@ const handleGridItem = (story, thumbPrefix) => {
               <img
               src="assets/stories/${thumbPrefix}/${story.thumbnail}"
               class="story-card__thumbnail-image"
+              alt="${story.title} thumb"
               />
               <button class="story-card__bookmark-btn">
               <img
                   class="story-card__bookmark-btn-icon"
                   src="assets/icons/bookmark.svg"
                   loading="lazy"
+                  alt=""
               />
               </button>
           </div>
@@ -84,7 +87,7 @@ const handleGridItem = (story, thumbPrefix) => {
                   <div class="story-card__info-author-avatar">
                   <img
                       src="assets/avatars/${story.avatar}"
-                      alt="Author Avatar"
+                      alt="${story.author} avatar"
                       class="story-card__info-author-avatar-image"
                       loading="lazy"
                   />

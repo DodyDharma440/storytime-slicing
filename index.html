@@ -13,202 +13,206 @@
     />
   </head>
   <body>
-    <div>
-      <nav class="navbar">
-        <div class="container navbar__content">
-          <a href="/">
+    <nav class="navbar">
+      <div class="container navbar__content">
+        <a href="/">
+          <img
+            src="assets/logo.png"
+            alt="Storytime Logo"
+            class="navbar__logo"
+          />
+        </a>
+
+        <div class="navbar__actions">
+          <button class="btn btn--primary-outline">Register</button>
+          <button class="btn btn--primary">Login</button>
+        </div>
+
+        <div class="navbar__actions-mobile">
+          <button class="navbar__actions-mobile-button" id="nav-mobile-button">
             <img
-              src="assets/logo.png"
-              alt="Storytime Logo"
-              class="navbar__logo"
+              class="navbar__actions-mobile-button-icon"
+              src="assets/icons/menu.svg"
+              alt=""
+            />
+          </button>
+
+          <div
+            id="nav-mobile-menu"
+            class="navbar__actions-mobile-menu-wrapper"
+          ></div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- hero section -->
+      <section class="hero container">
+        <h1 class="hero__title">Welcome to Storytime</h1>
+        <p class="hero__description">
+          The world's most-loved social storytelling platform. Story time
+          connects a global community of 90 million readers and writers through
+          the power of story.
+        </p>
+
+        <div class="hero__search">
+          <label for="search-input" class="sr-only">Search story</label>
+          <input
+            id="search-input"
+            class="hero__search-input"
+            type="search"
+            placeholder="Search story"
+          />
+          <img class="hero__search-icon" src="assets/icons/search.svg" alt="" />
+        </div>
+
+        <img
+          class="hero__illustration"
+          src="assets/hero.png"
+          loading="lazy"
+          alt="Hero illustration"
+        />
+      </section>
+
+      <!-- latest story -->
+      <section class="section">
+        <div class="section-title container">
+          <div class="section-title__content">
+            <h2 class="section-title__text">Latest Story</h2>
+            <a href="#" class="section-title__explore-btn">
+              Explore more
+              <img
+                src="assets/icons/arrow-right.svg"
+                class="section-title__explore-btn-icon"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <hr class="section-title__divider" />
+        </div>
+
+        <div class="stories-slider-wrapper">
+          <div class="stories-slider container" id="latest-story-slider"></div>
+        </div>
+      </section>
+
+      <!-- comedy -->
+      <section class="section container">
+        <div class="section-title">
+          <div class="section-title__content">
+            <h2 class="section-title__text">Comedy</h2>
+            <a href="#" class="section-title__explore-btn">
+              Explore more
+              <img
+                src="assets/icons/arrow-right.svg"
+                class="section-title__explore-btn-icon"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <hr class="section-title__divider" />
+        </div>
+
+        <div class="stories-grid" id="comedy-grid"></div>
+      </section>
+
+      <!-- romance -->
+      <section class="section">
+        <div class="section-title container">
+          <div class="section-title__content">
+            <h2 class="section-title__text">Romance</h2>
+            <a href="#" class="section-title__explore-btn">
+              Explore more
+              <img
+                src="assets/icons/arrow-right.svg"
+                class="section-title__explore-btn-icon"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <hr class="section-title__divider" />
+        </div>
+
+        <div class="stories-slider-wrapper">
+          <div class="stories-slider container" id="romance-slider"></div>
+        </div>
+      </section>
+
+      <!-- horror -->
+      <section class="section container">
+        <div class="section-title">
+          <div class="section-title__content">
+            <h2 class="section-title__text">Horror</h2>
+            <a href="#" class="section-title__explore-btn">
+              Explore more
+              <img
+                src="assets/icons/arrow-right.svg"
+                class="section-title__explore-btn-icon"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <hr class="section-title__divider" />
+        </div>
+
+        <div class="stories-grid" id="horror-grid"></div>
+      </section>
+
+      <!-- more categories -->
+      <section class="section container">
+        <div class="section-title">
+          <div class="section-title__content">
+            <h2 class="section-title__text">More Categories</h2>
+          </div>
+
+          <hr class="section-title__divider" />
+        </div>
+
+        <div class="categories">
+          <button class="categories__item">Adventure</button>
+          <button class="categories__item">Fiction</button>
+          <button class="categories__item">Fantasy</button>
+          <button class="categories__item">Heartfelt</button>
+          <button class="categories__item">Mystery</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <p class="footer__cp-text">
+          © 2024 PT. Timedoor Indonesia. All rights reserved.
+        </p>
+
+        <div class="footer__socials">
+          <a href="https://facebook.com" target="_blank">
+            <img
+              src="assets/icons/facebook.svg"
+              alt="Facebook"
+              class="footer__social-icon"
             />
           </a>
-
-          <div class="navbar__actions">
-            <button class="btn btn--primary-outline">Register</button>
-            <button class="btn btn--primary">Login</button>
-          </div>
-
-          <div class="navbar__actions-mobile">
-            <button
-              class="navbar__actions-mobile-button"
-              id="nav-mobile-button"
-            >
-              <img
-                class="navbar__actions-mobile-button-icon"
-                src="assets/icons/menu.svg"
-              />
-            </button>
-
-            <div
-              id="nav-mobile-menu"
-              class="navbar__actions-mobile-menu-wrapper"
-            ></div>
-          </div>
+          <a href="https://instagram.com/" target="_blank">
+            <img
+              src="assets/icons/instagram.svg"
+              alt="Instagram"
+              class="footer__social-icon"
+            />
+          </a>
+          <a href="https://youtube.com" target="_blank">
+            <img
+              src="assets/icons/youtube.svg"
+              alt="Youtube"
+              class="footer__social-icon"
+            />
+          </a>
         </div>
-      </nav>
-
-      <main>
-        <!-- hero section -->
-        <section class="hero container">
-          <h1 class="hero__title">Welcome to Storytime</h1>
-          <h6 class="hero__description">
-            The world's most-loved social storytelling platform. Story time
-            connects a global community of 90 million readers and writers
-            through the power of story.
-          </h6>
-
-          <div class="hero__search">
-            <input class="hero__search-input" placeholder="Search story" />
-            <img class="hero__search-icon" src="assets/icons/search.svg" />
-          </div>
-
-          <img
-            class="hero__illustration"
-            src="assets/hero.png"
-            loading="lazy"
-          />
-        </section>
-
-        <!-- latest story -->
-        <section class="section">
-          <div class="section-title container">
-            <div class="section-title__content">
-              <h2 class="section-title__text">Latest Story</h2>
-              <a href="#" class="section-title__explore-btn">
-                Explore more
-                <img
-                  src="assets/icons/arrow-right.svg"
-                  class="section-title__explore-btn-icon"
-                />
-              </a>
-            </div>
-
-            <hr class="section-title__divider" />
-          </div>
-
-          <div class="stories-slider-wrapper">
-            <div
-              class="stories-slider container"
-              id="latest-story-slider"
-            ></div>
-          </div>
-        </section>
-
-        <!-- comedy -->
-        <section class="section container">
-          <div class="section-title">
-            <div class="section-title__content">
-              <h2 class="section-title__text">Comedy</h2>
-              <a href="#" class="section-title__explore-btn">
-                Explore more
-                <img
-                  src="assets/icons/arrow-right.svg"
-                  class="section-title__explore-btn-icon"
-                />
-              </a>
-            </div>
-
-            <hr class="section-title__divider" />
-          </div>
-
-          <div class="stories-grid" id="comedy-grid"></div>
-        </section>
-
-        <!-- romance -->
-        <section class="section">
-          <div class="section-title container">
-            <div class="section-title__content">
-              <h2 class="section-title__text">Romance</h2>
-              <a href="#" class="section-title__explore-btn">
-                Explore more
-                <img
-                  src="assets/icons/arrow-right.svg"
-                  class="section-title__explore-btn-icon"
-                />
-              </a>
-            </div>
-
-            <hr class="section-title__divider" />
-          </div>
-
-          <div class="stories-slider-wrapper">
-            <div class="stories-slider container" id="romance-slider"></div>
-          </div>
-        </section>
-
-        <!-- horror -->
-        <section class="section container">
-          <div class="section-title">
-            <div class="section-title__content">
-              <h2 class="section-title__text">Horror</h2>
-              <a href="#" class="section-title__explore-btn">
-                Explore more
-                <img
-                  src="assets/icons/arrow-right.svg"
-                  class="section-title__explore-btn-icon"
-                />
-              </a>
-            </div>
-
-            <hr class="section-title__divider" />
-          </div>
-
-          <div class="stories-grid" id="horror-grid"></div>
-        </section>
-
-        <!-- more categories -->
-        <section class="section container">
-          <div class="section-title">
-            <div class="section-title__content">
-              <h2 class="section-title__text">More Categories</h2>
-            </div>
-
-            <hr class="section-title__divider" />
-          </div>
-
-          <div class="categories">
-            <button class="categories__item">Adventure</button>
-            <button class="categories__item">Fiction</button>
-            <button class="categories__item">Fantasy</button>
-            <button class="categories__item">Heartfelt</button>
-            <button class="categories__item">Mystery</button>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <div class="container footer__content">
-          <p class="footer__cp-text">
-            © 2024 PT. Timedoor Indonesia. All rights reserved.
-          </p>
-
-          <div class="footer__socials">
-            <a href="https://facebook.com" target="_blank">
-              <img
-                src="assets/icons/facebook.svg"
-                alt="Facebook"
-                class="footer__social-icon"
-              />
-            </a>
-            <a href="https://instagram.com/" target="_blank">
-              <img
-                src="assets/icons/instagram.svg"
-                alt="Instagram"
-                class="footer__social-icon"
-              />
-            </a>
-            <a href="https://youtube.com" target="_blank">
-              <img
-                src="assets/icons/youtube.svg"
-                alt="Youtube"
-                class="footer__social-icon"
-              />
-            </a>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <script src="js/constants.js"></script>
     <script src="js/script.js"></script>
