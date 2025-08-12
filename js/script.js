@@ -116,7 +116,7 @@ comedyGrid.innerHTML = comedyStories
 const navBtn = document.getElementById("nav-mobile-button");
 const navMobileMenu = document.getElementById("nav-mobile-menu");
 
-navBtn.addEventListener("click", () => {
+const handleToggleMenu = ({ fromWindow }) => {
   const isMenuOpen = navMobileMenu.getAttribute("data-open") === "true";
   navMobileMenu.setAttribute("data-open", isMenuOpen ? "false" : "true");
 
@@ -127,10 +127,26 @@ navBtn.addEventListener("click", () => {
       navMobileMenu.style.opacity = 1;
     }, 500);
   } else {
-    navMobileMenu.innerHTML = `      
-        <div class="navbar__actions-mobile-menu">
-            <button class="btn btn--primary-outline">Register</button>
-            <button class="btn btn--primary">Login</button>
-        </div>`;
+    if (!fromWindow) {
+      navMobileMenu.innerHTML = `      
+          <div class="navbar__actions-mobile-menu">
+              <button class="btn btn--primary-outline">Register</button>
+              <button class="btn btn--primary">Login</button>
+          </div>`;
+    }
   }
-});
+};
+
+const handleOutsideClick = () => {
+  handleToggleMenu({ fromWindow: true });
+};
+
+const handleClickMenu = (e) => {
+  e.stopPropagation();
+  handleToggleMenu({ fromWindow: false });
+};
+
+window.addEventListener("click", handleOutsideClick);
+navBtn.addEventListener("click", handleClickMenu);
+
+navMobileMenu.addEventListener("click", (e) => e.stopPropagation());
