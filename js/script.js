@@ -108,3 +108,25 @@ horrorGrid.innerHTML = horrorStories
 comedyGrid.innerHTML = comedyStories
   .map((i) => handleGridItem(i, "comedy"))
   .join("");
+
+const navBtn = document.getElementById("nav-mobile-button");
+const navMobileMenu = document.getElementById("nav-mobile-menu");
+
+navBtn.addEventListener("click", () => {
+  const isMenuOpen = navMobileMenu.getAttribute("data-open") === "true";
+  navMobileMenu.setAttribute("data-open", isMenuOpen ? "false" : "true");
+
+  if (isMenuOpen) {
+    navMobileMenu.style.opacity = 0;
+    setTimeout(() => {
+      navMobileMenu.innerHTML = "";
+      navMobileMenu.style.opacity = 1;
+    }, 500);
+  } else {
+    navMobileMenu.innerHTML = `      
+        <div class="navbar__actions-mobile-menu">
+            <button class="btn btn--primary-outline">Register</button>
+            <button class="btn btn--primary">Login</button>
+        </div>`;
+  }
+});
