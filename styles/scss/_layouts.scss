@@ -1,0 +1,74 @@
+@use "./mixins";
+@use "./utilities";
+
+.container {
+  margin: 0px auto;
+  max-width: 1732px;
+  padding-left: utilities.spacing(4);
+  padding-right: utilities.spacing(4);
+}
+
+.section {
+  padding-top: 80px;
+
+  @include mixins.md {
+    padding-top: 100px;
+  }
+
+  @include mixins.lg {
+    padding-top: 120px;
+  }
+}
+
+.section-title {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: utilities.to-rem(36);
+
+    @include mixins.md {
+      font-size: utilities.to-rem(40);
+    }
+
+    @include mixins.lg {
+      font-size: utilities.to-rem(44);
+    }
+  }
+
+  &__explore-btn {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    font-size: utilities.to-rem(20);
+
+    @include mixins.lg {
+      font-size: utilities.to-rem(24);
+    }
+  }
+
+  &__explore-btn-icon {
+    width: 24px;
+    height: 14px;
+    object-fit: contain;
+
+    @include mixins.lg {
+      width: 34px;
+      height: 24px;
+    }
+  }
+
+  &__divider {
+    border-color: #cccccc;
+    margin: utilities.spacing(8) 0px;
+
+    @include mixins.lg {
+      margin: utilities.spacing(10) 0px;
+    }
+  }
+}

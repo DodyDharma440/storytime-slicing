@@ -33,17 +33,18 @@ const handleSliderItem = (story, thumbPrefix) => {
                         ${story.author}
                         </p>
                     </div>
-
-                    <p>${story.date}</p>
-                    ${
-                      story.category
-                        ? ` <div class="story-card__info-tag">
-                                <span>${story.category}</span>
-                            </div>`
-                        : ""
-                    }
-                
+                    
+                    <div class="story-card__info-subinfo">
+                        <p>${story.date}</p>
+                        ${
+                          story.category
+                            ? ` <div class="story-card__info-subinfo-tag">
+                                    <span>${story.category}</span>
+                                </div>`
+                            : ""
+                        }
                     </div>
+                </div>
                 </div>
             </div>
         </div>

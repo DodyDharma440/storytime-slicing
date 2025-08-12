@@ -1,19 +1,25 @@
 @use "../variables";
 @use "../utilities";
+@use "../mixins";
 
 .btn {
-  padding: utilities.spacing(3.5) utilities.spacing(7.5);
+  padding: utilities.spacing(2.5) utilities.spacing(6.5);
   min-width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   cursor: pointer;
-  font-size: utilities.to-rem(24);
+  font-size: utilities.to-rem(20);
   border-radius: utilities.spacing(2);
   border: 2px solid;
   border-color: transparent;
   transition: background-color 0.3s;
+
+  @include mixins.lg {
+    font-size: utilities.to-rem(24);
+    padding: utilities.spacing(3.5) utilities.spacing(7.5);
+  }
 
   &:disabled,
   &--disabled {
